@@ -1,1 +1,13 @@
-<p>list-persona works!</p>
+<table class = "table table-sm">
+<tr *ngFor="let persona of personaService.list">
+    <td>{{persona.dni}}</td>
+    <td>{{persona.nombre}}</td>
+    <td>{{persona.apellido}}</td>
+    <td>{{persona.fechaNacimiento}}</td>
+    
+    <td>
+        <button type="submit" (click)="eliminarPersona(persona.dni!)" > Borrar</button>
+        
+    </td>
+</tr>
+</table>
